@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+          crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+            crossorigin="anonymous">
+    </script>
+    <title>pizzabestilling</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Holbergs Pizza</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">Ny Bestilling</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="bestillinger.html">Se alle</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<h1>Bestilling</h1>
+
+<table class="table">
+    <tr>
+        <td><label for="pizzatype">Pizzatype</label></td>
+        <td>
+            <select name="pizzatype" id="pizzatype">
+                <option value="Velg pizza">Velg pizza</option>
+                <option value="Margarita">Margarita</option>
+                <option value="Kebab">Kebab</option>
+                <option value="Taco">Taco</option>
+                <option value="Spicy">Spicy</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="pizzatykkelse"></label>Pizzatykkelse</td>
+        <td id="pizzatykkelse">
+            <input type="radio" name="tykkelse" id="tynn" value="tynn"><label for="tynn">Tynn</label>
+            <input type="radio" name="tykkelse" id="tykk" value="tykk"><label for="tykk">Tykk</label>
+        </td>
+    </tr>
+    <tr>
+        <td><label for="antall">Antall</label></td>
+        <td><input type="number" id="antall"></td>
+    </tr>
+    <tr>
+        <td><label for="navn">Navn</label></td>
+        <td><input type="text" id="navn"></td>
+    </tr>
+    <tr>
+        <td><label for="adresse">Adresse</label></td>
+        <td><input type="text" id="adresse"></td>
+    </tr>
+    <tr>
+        <td><label for="nummer">Nummer</label></td>
+        <td><input type="text" id="nummer"></td>
+    </tr>
+    <tr><td><button onclick="saveToServer()" class="btn btn-primary" id="bestillKnapp">Bestill</button></td></tr>
+    
+</table>
+
+<script src="js/index.js"></script>
+</body>
+</html>
