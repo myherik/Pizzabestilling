@@ -67,5 +67,20 @@ namespace Pizzabestilling.Controllers
                 return false;
             }
         }
+
+        [HttpGet("kunde/{navn}")]
+        public Kunde getKundeByNavn(string navn)
+        {
+            try
+            {
+                var DbKunde = _db.Kunder.FirstOrDefault(kunde => kunde.Navn == navn);
+                return DbKunde;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return null;
+            }
+        }
     }
 }

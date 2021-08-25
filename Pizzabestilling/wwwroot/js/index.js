@@ -19,3 +19,12 @@ const saveToServer=()=>{
         contentType: "application/json"
     })
 }
+const autofyll=()=>{
+    var url = "/api/Bestilling/kunde/" + $("#navn").val()
+    $.get(url, data => {
+        if (data !== undefined){
+            $("#adresse").val(data.adresse);
+            $("#nummer").val(data.telefon);
+        }
+    })
+}
