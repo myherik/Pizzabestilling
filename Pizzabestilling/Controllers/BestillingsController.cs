@@ -50,5 +50,22 @@ namespace Pizzabestilling.Controllers
                 return false;
             }
         }
+
+        [HttpPut("{id}")]
+        public bool RemoveBestilling(int id)
+        {
+            try
+            {
+                var bestilling = _db.Bestillinger.Find(id);
+                _db.Bestillinger.Remove(bestilling);
+                _db.SaveChanges();
+                return true;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return false;
+            }
+        }
     }
 }

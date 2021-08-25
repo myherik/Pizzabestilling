@@ -33,47 +33,51 @@
     </div>
 </nav>
 
-<h1>Bestilling</h1>
+<div class="container">
+    <h1>Bestilling</h1>
 
-<table class="table">
-    <tr>
-        <td><label for="pizzatype">Pizzatype</label></td>
-        <td>
-            <select name="pizzatype" id="pizzatype">
-                <option value="Velg pizza">Velg pizza</option>
-                <option value="Margarita">Margarita</option>
-                <option value="Kebab">Kebab</option>
-                <option value="Taco">Taco</option>
-                <option value="Spicy">Spicy</option>
-            </select>
-        </td>
-    </tr>
-    <tr>
-        <td><label for="pizzatykkelse"></label>Pizzatykkelse</td>
-        <td id="pizzatykkelse">
-            <input type="radio" name="tykkelse" id="tynn" value="tynn"><label for="tynn">Tynn</label>
-            <input type="radio" name="tykkelse" id="tykk" value="tykk"><label for="tykk">Tykk</label>
-        </td>
-    </tr>
-    <tr>
-        <td><label for="antall">Antall</label></td>
-        <td><input type="number" id="antall"></td>
-    </tr>
-    <tr>
-        <td><label for="navn">Navn</label></td>
-        <td><input type="text" id="navn"></td>
-    </tr>
-    <tr>
-        <td><label for="adresse">Adresse</label></td>
-        <td><input type="text" id="adresse"></td>
-    </tr>
-    <tr>
-        <td><label for="nummer">Nummer</label></td>
-        <td><input type="text" id="nummer"></td>
-    </tr>
-    <tr><td><button onclick="saveToServer()" class="btn btn-primary" id="bestillKnapp">Bestill</button></td></tr>
-    
-</table>
+    <table class="table">
+        <tr>
+            <td><label for="pizzatype">Pizzatype</label></td>
+            <td>
+                <select name="pizzatype" id="pizzatype">
+                    <option value="Velg pizza">Velg pizza</option>
+                    <option value="Margarita">Margarita</option>
+                    <option value="Kebab">Kebab</option>
+                    <option value="Taco">Taco</option>
+                    <option value="Spicy">Spicy</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="pizzatykkelse"></label>Pizzatykkelse</td>
+            <td id="pizzatykkelse">
+                <input type="radio" name="tykkelse" id="tynn" value="tynn"><label for="tynn">Tynn</label>
+                <input type="radio" name="tykkelse" id="tykk" value="tykk"><label for="tykk">Tykk</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="antall">Antall</label></td>
+            <td><input type="number" id="antall"></td>
+        </tr>
+        <tr>
+            <td><label for="navn">Navn</label></td>
+            <td><input type="text" id="navn"></td>
+        </tr>
+        <tr>
+            <td><label for="adresse">Adresse</label></td>
+            <td><input type="text" id="adresse"></td>
+        </tr>
+        <tr>
+            <td><label for="nummer">Nummer</label></td>
+            <td><input type="text" id="nummer"></td>
+        </tr>
+        <tr><td><button onclick="saveToServer()" class="btn btn-primary" id="bestillKnapp">Bestill</button></td></tr>
+
+    </table>
+</div>
+
+
 
 <script src="js/index.js"></script>
 </body>
