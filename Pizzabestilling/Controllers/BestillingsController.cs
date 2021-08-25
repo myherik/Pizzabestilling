@@ -38,6 +38,8 @@ namespace Pizzabestilling.Controllers
                 }
                 else
                 {
+                    dbKunde.Adresse = bestillingen.Kunde.Adresse;
+                    dbKunde.Telefon = bestillingen.Kunde.Telefon;
                     bestillingen.Kunde = dbKunde;
                 }
 
